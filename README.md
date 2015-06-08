@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.org/alexrv11/DBOr.svg?branch=master)](https://travis-ci.org/alexrv11/DBOr)
+[![Build Status](https://travis-ci.org/alexrv11/sudoku-app.svg)](https://travis-ci.org/alexrv11/sudoku-app)
 
 # Sudoku app
