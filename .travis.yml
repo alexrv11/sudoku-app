@@ -6,8 +6,12 @@ install: npm install
 before_script: grunt build
 deploy:
   provider: heroku
-  api_key: "0239493c-3605-4ae6-b9b9-91b571366504"
-  app: sudokuz
+  api_key:
+    master: "0239493c-3605-4ae6-b9b9-91b571366504"
+    production: "d50f6d3e-9754-4e9f-b96b-724ef49b1215"
+  app:
+    master: sudokuz
+    production: sudokuz-prod
   run:
       - restart
 
