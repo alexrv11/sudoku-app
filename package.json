@@ -1,0 +1,35 @@
+{
+  "name": "dbor",
+  "author": "Alex R. Ventura Quiroz ",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "grunt test",
+    "start": "node src/index.js"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/alexrv11/DBOr.git"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Alex Ventura",
+      "email": "alex.rv11@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.11.2"
+  },
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "express": "~4.11.0",
+    "mongoose": "^3.8.24"
+  },
+  "engines": {
+    "node": "0.12.2",
+    "npm": "1.4.28"
+  }
+}

@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "0.12"
+before_install: npm install -g grunt-cli
+install: npm install
+before_script: grunt build
+deploy:
+  provider: heroku
+  api_key: "c3e9db4e-3b55-4b98-8ad3-c8980f2d3f0a"
+  app: dbor
+  run:
+      - restart
+
