@@ -30,10 +30,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-wiredep');
 
     grunt.registerTask('build', [
-        'jshint'
+        //'jshint'
+        'wiredep'
     ]);
 
     grunt.registerTask('test', [
-        'jshint'
+        //'jshint'
     ]);
 };
