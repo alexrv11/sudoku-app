@@ -9,6 +9,6 @@ module.exports = function(app) {
 
 
     app.get('/sudoku-api/generate', function (req, res) {
-        res.send(['1', '2']);
+        res.send(['1', '5']);
     });
 };

@@ -1,6 +1,6 @@
 angular
 	.module('sudoku')
-		.controller('sudokuController',[
+		.controller('sudokuController', [
 			'$scope',
 			'SudokuRest',
 			'data',
