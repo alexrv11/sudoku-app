@@ -5,8 +5,7 @@
   "private": true,
   "scripts": {
     "test": "grunt test",
-    "start": "node src/index.js",
-    "postinstall": "bower install && grunt build"
+    "start": "node src/index.js"
   },
   "repositories": [
     {
