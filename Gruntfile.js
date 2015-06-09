@@ -16,11 +16,18 @@ module.exports = function (grunt) {
             options: {
                 jshintrc: '.jshintrc'
             }
+        },
+        wiredep: {
+            app: {
+                src: ['src/client/index.html']
+            }
         }
     });
 
     //Client and Server dependencies
     grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    grunt.loadNpmTasks('grunt-wiredep');
 
     grunt.registerTask('build', [
         'jshint'

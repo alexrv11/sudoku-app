@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<link lang="en">
     <meta charset="UTF-8">
     <title>Home</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- bower:js -->
+    <script src="assets/libs/jquery/dist/jquery.js"></script>
+    <script src="assets/libs/angular/angular.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/libs/lodash/lodash.js"></script>
+    <script src="assets/libs/restangular/dist/restangular.js"></script>
+    <!-- endbower -->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <script src="sudoku/app.js"></script>
+    <script src="sudoku/app.config.js"></script>
+    <script src="sudoku/data.js"></script>
+    <script src="sudoku/sudoku.rest.service.js"></script>
+    <script src="sudoku/sudoku.controller.js"></script>
 </head>
 <body>
-    <h1>Hello Express 2</h1>
+    <header class="site-header">
+
+    </header>
+    <div id="wrapper" class="container" ng-app="sudoku">
+        <div class="content" ng-controller="sudokuController">
+            <div class="row">
+                <div class="col-md-11 col-sm-11 col-xs-11">
+                    <div ng-repeat="row in rows" class="row">
+                        <div ng-repeat="column in row.columns" class="col-md-1 col-sm-1 col-xs-1">
+                            <input class="form-control {[{ column.class }]}"
+                                   type="text" name="cell-{[{row.id}]}{[{column.id}]}"
+                                   value="column.value" ng-model="column.value" type="number"
+                                   ng-maxlength="1" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-1">
+                    <div class="row">
+                        <button class="btn btn-danger btn-block" ng-click="createGame()"><i
+                                class="icon-random"></i> New Game
+                        </button>
+                        <button class="btn btn-default btn-block" ng-click="restart()"><i
+                                class="icon-repeat"></i> Restart
+                        </button>
+                        <button class="btn btn-success btn-block" ng-click="solve()"><i
+                                class="icon-ok-sign"></i> Solve
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
