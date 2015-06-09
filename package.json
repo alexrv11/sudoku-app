@@ -6,7 +6,7 @@
   "scripts": {
     "test": "grunt test",
     "start": "node src/index.js",
-    "postinstall": "bower install && grunt build"
+    "postinstall": "./node_modules/bower/bin/bower install && grunt build"
   },
   "repositories": [
     {
