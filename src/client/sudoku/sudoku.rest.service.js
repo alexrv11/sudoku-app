@@ -1,14 +1,14 @@
 angular.module('sudoku')
     .factory('SudokuRest', [
-        'Restangular',
-        function(Restangular) {
+        '$http',
+        function($http) {
             return {
                 createGame: function () {
-                    Restangular.all('generate').getList()  // GET: /users
-                        .then(function(game) {
-                            console.log('Game: ', game);
-                            return game[0];
-                        })
+                    $http.get('sudoku-api/generate').success(function(data, status, headers, config) {
+                        console.log('data: ', data);
+                    }).error(function(data, status, headers, config) {
+                            console.log('errr: ', data);
+                    });
                 }
             };
         }

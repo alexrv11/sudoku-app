@@ -1,1 +1,1 @@
-angular.module('sudoku', ['restangular']);
+angular.module('sudoku', []);
