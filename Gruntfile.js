@@ -21,6 +21,25 @@ module.exports = function (grunt) {
             app: {
                 src: ['src/client/index.html']
             }
+        },
+
+        jasmine_node: {
+            unittest: {
+                options: {
+                    forceExit: true,
+                    match: '.',
+                    matchall: false,
+                    specFolders: [
+                        'test/server'
+                    ],
+                    extensions: 'js',
+                    specNameMatcher: 'spec'
+                },
+                all: [
+                    'src/server/'
+                ],
+                src: ['src/server/**/*.js']
+            }
         }
     });
 
@@ -28,6 +47,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
     grunt.loadNpmTasks('grunt-wiredep');
+    grunt.loadNpmTasks('grunt-jasmine-node');
 
     grunt.registerTask('build', [
         //'jshint'
@@ -35,6 +55,6 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('test', [
-        //'jshint'
+        'jasmine_node:unittest'
     ]);
 };
