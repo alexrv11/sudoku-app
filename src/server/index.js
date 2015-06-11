@@ -6,9 +6,10 @@
  * @return <function>
  */
 module.exports = function(app) {
-
-
+    var model = require('./model');
     app.get('/sudoku-api/generate', function (req, res) {
-        res.send(['1', '5']);
+        var generator = model.getModel('sudokuGenerator');
+        var sudoku = generator.generateGame(20);
+        res.send(sudoku.game());
     });
 };

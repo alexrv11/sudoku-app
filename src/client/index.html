@@ -13,7 +13,6 @@
     <!-- endbower -->
     <link rel="stylesheet" href="assets/css/main.css"/>
     <script src="sudoku/app.js"></script>
-    <script src="sudoku/data.js"></script>
     <script src="sudoku/sudoku.rest.service.js"></script>
     <script src="sudoku/sudoku.controller.js"></script>
 </head>
@@ -25,11 +24,11 @@
         <div class="content" ng-controller="sudokuController">
             <div class="row">
                 <div class="col-md-11 col-sm-11 col-xs-11">
-                    <div ng-repeat="row in rows" class="row">
-                        <div ng-repeat="column in row.columns" class="col-md-1 col-sm-1 col-xs-1">
-                            <input class="form-control {[{ column.class }]}"
-                                   type="text" name="cell-{[{row.id}]}{[{column.id}]}"
-                                   value="column.value" ng-model="column.value" type="number"
+                    <div ng-repeat="row in rows track by $index" class="row">
+                        <div ng-repeat="value in row track by $index" class="col-md-1 col-sm-1 col-xs-1">
+                            <input class="form-control"
+                                   type="text" style="text-align:center;"
+                                   value="value" ng-model="value"
                                    ng-maxlength="1" required>
                         </div>
                     </div>
