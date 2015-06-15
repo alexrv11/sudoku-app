@@ -4,10 +4,8 @@ angular.module('sudoku')
         function($http) {
             return {
                 createGame: function () {
-                    $http.get('sudoku-api/generate').success(function(data, status, headers, config) {
-                        console.log('data: ', data);
-                    }).error(function(data, status, headers, config) {
-                            console.log('errr: ', data);
+                    return $http.get('sudoku-api/generate').then(function (data) {
+                            return data;
                     });
                 }
             };

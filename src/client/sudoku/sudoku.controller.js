@@ -4,23 +4,17 @@ angular
 			'$scope',
 			'SudokuRest',
 			function ($scope, SudokuRest) {
-				var initGame = function () {
-					var result = [
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0],
-						[0,0,0,0,0,0,0,0,0]];
-					return result;
-				};
+
 				$scope.createGame = function () {
-					$scope.rows = SudokuRest.createGame();
+					SudokuRest.createGame().then(function (response) {
+						$scope.game = response.data;
+						$scope.initStateGame = response.data
+					});
 				};
-				$scope.rows = initGame();
-				console.log('rows: ', $scope.rows);
+
+				$scope.restart = function () {
+					$scope.game = $scope.initStateGame
+				};
+				$scope.createGame();
 			}
 		]);
