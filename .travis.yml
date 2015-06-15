@@ -1,22 +1,24 @@
 language: node_js
 node_js:
-  - "0.12"
+- '0.12'
 before_install:
-  - npm install -g grunt-cli
-  - npm install -g bower
+- npm install -g grunt-cli
+- npm install -g bower
 install:
-  - npm install
-  - bower install
+- npm install
+- bower install
 before_script: grunt build
 deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    master: "0239493c-3605-4ae6-b9b9-91b571366504"
-    production: "d50f6d3e-9754-4e9f-b96b-724ef49b1215"
+    master: HEROKU_API_KEY_DEV
+    production: d50f6d3e-9754-4e9f-b96b-724ef49b1215
   app:
     master: sudokuz
     production: sudokuz-prod
   run:
-      - restart
-
+  - restart
+env:
+  global:
+    secure: nIV2WaTqHUR+5MVYqmkdKgCvZdwzN5GEg2I+1KDxJe9LWhpb7WHho9NR0Rb94YxlSVUt/wO1gdgMepNkXXbFvUs46V5HgfM9pEl3SYgFhtl2VRir/GkvRR2fgqqQlgdmil5bIxr6D5pECwyJkwZfR/jjg0F0Ncdz2myo5iJCWBluXwq9apBHURSiJn6EQ2qwy91Pyk9ZrP42I2ox8iNQ32x/xFM3hrefLXXVWgozmCMQb7RizIUkd41iE1Je8VjyEZRCvTguynmyktOUwXOnOUzrEPKcMVPun0y4XcGk93J7bxQoIvBRjiVbo2LwgzZ5NgS4eJHmXcOqK6oMSHJLkfZm1su2X1XGzd4yM0AqDTvcZtaD9nm0H7a3u0/e2lCCcElQ4D7wW0w6TFkOP6HqpKPHLyOzl8gF9CPNMnew+/Sajpfl4HlK9H0KlyEPPL5HbrzapuZlGbW87JMXm1u11h2Yi3N6R1WECQ1WStEeyfdh1t0K5YCbOahjTkMvbqFtfuVoOVPQIccLGpF7WvQHQ6YiNqBW+9OnN0k7PhRHAOCZmcyiAezp3tsmtfv/kgzgl/SWlHS0XsULp7W70ZNKCekm1OZm7qbdNoc9aiAL8gGN6fbAgyT74FGePxuOuJm20Kv3+udf893YMe4fQwI6PnlqgmvDCkEdm9UG6woqVMk=
