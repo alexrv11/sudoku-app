@@ -7,12 +7,13 @@ before_install:
 install:
 - npm install
 - bower install
+- echo System.env.HEROKU_API_KEY
 before_script: grunt build
 deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    master: HEROKU_API_KEY
+    master: System.env.HEROKU_API_KEY
     production: d50f6d3e-9754-4e9f-b96b-724ef49b1215
   app:
     master: sudokuz
