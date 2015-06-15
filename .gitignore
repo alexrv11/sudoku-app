@@ -9,6 +9,7 @@
 *.lock
 
 node_modules/
+src/client/assets/libs/
 
 ## Grunt files
 *.npm-debug.log

@@ -16,17 +16,45 @@ module.exports = function (grunt) {
             options: {
                 jshintrc: '.jshintrc'
             }
+        },
+        wiredep: {
+            app: {
+                src: ['src/client/index.html']
+            }
+        },
+
+        jasmine_node: {
+            unittest: {
+                options: {
+                    forceExit: true,
+                    match: '.',
+                    matchall: false,
+                    specFolders: [
+                        'test/server'
+                    ],
+                    extensions: 'js',
+                    specNameMatcher: 'spec'
+                },
+                all: [
+                    'src/server/'
+                ],
+                src: ['src/server/**/*.js']
+            }
         }
     });
 
     //Client and Server dependencies
     grunt.loadNpmTasks('grunt-contrib-jshint');
 
+    grunt.loadNpmTasks('grunt-wiredep');
+    grunt.loadNpmTasks('grunt-jasmine-node');
+
     grunt.registerTask('build', [
-        'jshint'
+        //'jshint'
+        'wiredep'
     ]);
 
     grunt.registerTask('test', [
-        'jshint'
+        'jasmine_node:unittest'
     ]);
 };

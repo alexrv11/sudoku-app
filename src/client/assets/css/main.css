@@ -1,0 +1,46 @@
+.margin_left_60 {
+    margin-left: 60px !important;
+}
+
+.margin_bottom_60 {
+    margin-bottom: 40px !important;
+}
+
+input.valide {
+    color: blue !important;
+}
+
+input.error {
+    color: red !important;
+}
+
+input.correct {
+    color: green !important;
+    cursor: not-allowed !important;
+    background: #EBE6DF !important;
+}
+
+#wrapper {
+    margin-top: 20px;
+}
+
+.row{
+    margin-bottom: 10px;
+}
+
+.site-header nav {
+    padding: 22px 30px;
+}
+
+.site-header nav>a {
+    color: #444;
+    margin-right: 1.8em;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.site-header nav .brand img {
+    height: 40px;
+    margin-top: -2px;
+    vertical-align: middle;
+}

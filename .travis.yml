@@ -1,11 +1,16 @@
 language: node_js
 node_js:
   - "0.12"
-before_install: npm install -g grunt-cli
-install: npm install
+before_install:
+  - npm install -g grunt-cli
+  - npm install -g bower
+install:
+  - npm install
+  - bower install
 before_script: grunt build
 deploy:
   provider: heroku
+  skip_cleanup: true
   api_key:
     master: "0239493c-3605-4ae6-b9b9-91b571366504"
     production: "d50f6d3e-9754-4e9f-b96b-724ef49b1215"
