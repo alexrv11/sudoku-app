@@ -13,13 +13,10 @@ deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    master: System.env.HEROKU_API_KEY
+    master: 0239493c-3605-4ae6-b9b9-91b571366504
     production: d50f6d3e-9754-4e9f-b96b-724ef49b1215
   app:
     master: sudokuz
     production: sudokuz-prod
   run:
   - restart
-env:
-  global:
-    secure: biM4uw0mJOBBGuqymcgcmFAturdaBv+9lFHkue+qIPEBlH4HPHFZxM90ASY9pEzIVaHH2ET1c1t1TpOngbEefKGZqmM6JwdXLfyooVyNtniHQ24ztJp4K//Ojz6tIa9L3/pm7dTKRrv2dze+q82fxJtpe2yVuU0VvYYVukWvVaDXbe/UE7jlwqh52SaUO7cdC/XzQ4mvdSKbOEjKMeMM/GEv2DJ+Z7rnVOzxeEEJw2TuUJh0rf3bnHPQcwp15/+7vgkMIHlwd4ev6W7Mp3eDncFO5r6+AXE4VM14Q+QjhyEq4LKh3QQg7ZH4uaeo4JjjuF2bSVA+3QmFm4/y8nelxwb1+oJDuJQ7sN5hGYeIRfQAl7Dy9UmfQzl9u4kZb26MKb+iDgoVSMhHxc84d/XuOtS1oGwQeizRPbBQHYv7EcYtqEHtZIVnICudbN3xDLbvZqHwYJ48+91dhrNscWEYHRJ0pN5lf/Jg9FQBWRUwCoy5zC3yTo/iV/ig38X1o+N6g1CfifARwXWNx5fpIPdaJVsNZ3Bjt9A7UHnh6NSxIitIlq0tSOuXnb2QGgU5BZLlWaJDRnGZTxVsQLZEoskgT8lSRPzy5TA8W2Jh0vYDVdWof/RXzQEGdS2XigUd1KLil+tR+9ptytXBxXuRi7bOS0oDcmmBBOU2j7gaKASuj/8=
