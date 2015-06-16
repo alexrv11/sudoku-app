@@ -153,6 +153,7 @@ describe('SquareValidator Test', function() {
         var result = sudokuValidator.existSquare(sudoku, row, col, value);
         expect(null).toBeDefined();
         expect(result).toBeTruthy();
+        expect(false).toBeTruthy();
     });
 });
 
