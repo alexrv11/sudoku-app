@@ -7,8 +7,6 @@ before_install:
 install:
 - npm install
 - bower install
-- echo $HEROKU_API_KEY
-- echo $env.HEROKU_API_KEY
 script:
 - grunt build
 - npm test
