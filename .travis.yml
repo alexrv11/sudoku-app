@@ -7,7 +7,7 @@ before_install:
 install:
 - npm install
 - bower install
-- echo System.env.HEROKU_API_KEY
+- echo ${HEROKU_API_KEY}
 before_script: grunt build
 deploy:
   provider: heroku
@@ -20,3 +20,6 @@ deploy:
     production: sudokuz-prod
   run:
   - restart
+env:
+  global:
+    secure: kXh8lLu3vrcLdpIOJC+DRrdS5LJwrR88RNEaE3COeYtWyRemKzK6qqKMIgEb8POc5g/MGTIuSogiCKMZ0iiaTAEMB+pPx16uEl3SbtHay7IXJUfOdhVmtc8S0oSOYx8oJ5XpHiJAAcV1Lt2d5z6NKEuKh0qLEQv0m5+QHVnTUtgHbj9itGxgtBlFmmuFe7Hp7nKLP/n0Q08acWY4hIp8BmBCPCh0qfgq5OwuCfOKckG1N0QAAcEd0xjm3Ic19cVv/PXR1yDEA6ZpIDDdHBzHsdEG0uN0nWzLT2Jl7U6g9W5lLlWdddy5pdwVDvCyZHts0uJWCnPKI7HGNbQOlhj/eK8+F1Kglj3kQKMxBBIk2myQSScyI1RuJrEmv7kCC4s/lvXizyaxjYBM00vDR4qFjDyeX6k53deMzDv/H3jKFJvGCzeIOKpCBpQd2XlKhjzkCC0znSxKSg1yCXt/b5MvFN+EIDbV0VJc1WW7TaIYZLd55EcQyZzNu4i+8F/+p/H0L/Im0r07ScfA8d+TQwHPsoSTmr8ALSSNCsjGt8eufKyLpGxLkv41NkS70Gs7vDtfLM6GApAesas5u62UGzW0C3a0zPq7SiHQSYRsAQEizSKy/27bZHloHgOVDcdg+uNmleaIk4W+99sc+8ouAKgQtRNyOcF82f5v2xk6mY30rdI=
