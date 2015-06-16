@@ -24,7 +24,7 @@
     </header>
     <div id="wrapper" class="container" ng-app="sudoku">
         <div class="content" ng-controller="sudokuController">
-            <div class="row">
+            <div class="row btn">
                 <button ng-click="createGame()"><i
                         class="icon-random"></i> New Game
                 </button>
@@ -37,7 +37,7 @@
             </div>
             <div class="row">
                 <div class="col-md-11 col-sm-11 col-xs-11">
-                    <div ng-repeat="row in game track by $index" class="row">
+                    <div ng-repeat="row in game track by $index" class="row frame">
                         <div ng-repeat="value in row track by $index | showNumber" class="col-md-1 col-sm-1 col-xs-1">
                             <input class="form-control"
                                    type="text" style="text-align:center;"
