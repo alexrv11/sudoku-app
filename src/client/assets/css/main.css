@@ -46,11 +46,12 @@ button {
     height: 50px;
     width: 50px;
     padding: 5px;
-    margin: 0;
+    margin-left: 4px;
+    margin-bottom: 4px;
     font-weight: bold;
     font-size: 24px;
-    border: 0px inset black;
-
+    border: 0 inset black;
+    float: left;
 }
 
 button:hover {
