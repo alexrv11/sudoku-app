@@ -1,5 +1,5 @@
-describe("Sudoku Test", function () {
-    it("generate sudoku game", function () {
+describe('Sudoku Test', function () {
+    it('generate sudoku game', function () {
         var sudokuGenerator = require('./../../../src/server/model/sudokuGenerator');
         var numberByFill = 15;
         var game = sudokuGenerator.generateGame(numberByFill).game();

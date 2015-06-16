@@ -1,8 +1,8 @@
 
-describe("SudokuBackTrakingSolver Test", function() {
+describe('SudokuBackTrakingSolver Test', function() {
     var Sudoku = require('../../../src/server/model/sudoku');
     var sudokuSolver = require('../../../src/server/model/sudokuBackTrakingSolver');
-    it("The sudoku is Filled", function() {
+    it('The sudoku is Filled', function() {
 
         var isSudokuFill = function (game) {
             for (var i = 0; i < game.length; ++i) {
@@ -36,7 +36,7 @@ describe("SudokuBackTrakingSolver Test", function() {
         expect(isSudokuFill(game)).toBeTruthy();
     });
 
-    it("The start values do not changes", function() {
+    it('The start values do not changes', function() {
 
         var notChangesTheStartValues = function (startGame, solvedGame) {
             for(var i = 0; i < startGame.length; ++i) {
@@ -84,7 +84,7 @@ describe("SudokuBackTrakingSolver Test", function() {
         expect(notChangesTheStartValues(startGame, game)).toBeTruthy();
     });
 
-    it("the numbers do not repeat in the same row", function() {
+    it('the numbers do not repeat in the same row', function() {
         var numberCounterMap = {};
         var numberCounter = function (game, map) {
             for(var i = 0; i < game.length; ++i) {
@@ -129,7 +129,7 @@ describe("SudokuBackTrakingSolver Test", function() {
         expect(numberCounter(game, numberCounterMap)).toBeTruthy();
     });
 
-    it("the numbers do not repeat in the same column", function() {
+    it('the numbers do not repeat in the same column', function() {
         var numberCounterMap = {};
         var numberCounterByColumn = function (game, map) {
             for(var i = 0; i < game.length; ++i) {
@@ -176,7 +176,7 @@ describe("SudokuBackTrakingSolver Test", function() {
 
     });
 
-    it("the numbers do not repeat in the same square", function() {
+    it('the numbers do not repeat in the same square', function() {
 
         var existSameNumberInTheSameSquare = function (game) {
             var squareMap = {};

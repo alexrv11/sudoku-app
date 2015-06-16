@@ -1,7 +1,7 @@
 
-describe("Sudoku Test", function() {
+describe('Sudoku Test', function() {
 	var Sudoku = require('../../../src/server/model/sudoku');
-    it("the Sudoku is created", function() {
+    it('the Sudoku is created', function() {
 		var game = [
 			[1, 0, 0, 0, 0, 0, 0, 2, 0],
 			[0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -17,7 +17,7 @@ describe("Sudoku Test", function() {
 		expect(sudoku).toBeDefined();
     });
 
-	it("get value of the sudoku", function() {
+	it('get value of the sudoku', function() {
 		var game = [
 			[1, 0, 0, 0, 0, 0, 0, 2, 0],
 			[0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -34,7 +34,7 @@ describe("Sudoku Test", function() {
 		expect(result).toEqual(1);
 	});
 
-	it("change value of the sudoku", function() {
+	it('change value of the sudoku', function() {
 		var game = [
 			[1, 0, 0, 0, 0, 0, 0, 2, 0],
 			[0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -56,7 +56,7 @@ describe("Sudoku Test", function() {
 		expect(value).toEqual(newValue);
 	});
 
-	it("get game of the sudoku", function() {
+	it('get game of the sudoku', function() {
 		var game = [
 			[1, 0, 0, 0, 0, 0, 0, 2, 0],
 			[0, 0, 0, 0, 0, 0, 0, 1, 0],
