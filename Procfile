@@ -1,2 +1,2 @@
+ps:scale worker=1
 web: npm start
-ps: scale web=1
