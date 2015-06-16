@@ -151,7 +151,7 @@ describe('SquareValidator Test', function() {
         var row = 5;
         var value = 8;
         var result = sudokuValidator.existSquare(sudoku, row, col, value);
-        expect(result).toBeDefined();
+        expect(null).toBeDefined();
         expect(result).toBeTruthy();
     });
 });
