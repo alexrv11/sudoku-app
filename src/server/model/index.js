@@ -1,5 +1,5 @@
 module.exports = {
     getModel: function (modelName) {
-        return require('./' + modelName)
+        return require('./' + modelName);
     }
 };

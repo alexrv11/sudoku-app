@@ -1,8 +1,8 @@
-describe("RowValidator Test", function() {
+describe('RowValidator Test', function() {
     var Sudoku = require('../../../src/server/model/sudoku');
     var sudokuValidator = require('../../../src/server/model/sudokuValidator');
 
-    it("the 5 number does not exist in the sudoku", function() {
+    it('the 5 number does not exist in the sudoku', function() {
         var game = [
             [1, 0, 0, 0, 0, 0, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -21,7 +21,7 @@ describe("RowValidator Test", function() {
         expect(result).toBeFalsy();
     });
 
-    it("the 8 number exist in the sudoku", function() {
+    it('the 8 number exist in the sudoku', function() {
         var game = [
             [1, 0, 0, 0, 0, 0, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -42,11 +42,11 @@ describe("RowValidator Test", function() {
 
 });
 
-describe("ColumnValidator Test", function() {
+describe('ColumnValidator Test', function() {
     var Sudoku = require('../../../src/server/model/sudoku');
     var sudokuValidator = require('../../../src/server/model/sudokuValidator');
 
-    it("the 5 number does not exist in the sudoku", function() {
+    it('the 5 number does not exist in the sudoku', function() {
         var game = [
             [1, 0, 0, 0, 0, 0, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -65,7 +65,7 @@ describe("ColumnValidator Test", function() {
         expect(result).toBeFalsy();
     });
 
-    it("the 9 number exist in the sudoku", function() {
+    it('the 9 number exist in the sudoku', function() {
         var game = [
             [1, 0, 0, 0, 0, 3, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -86,11 +86,11 @@ describe("ColumnValidator Test", function() {
 
 });
 
-describe("SquareValidator Test", function() {
+describe('SquareValidator Test', function() {
     var Sudoku = require('../../../src/server/model/sudoku');
     var sudokuValidator = require('../../../src/server/model/sudokuValidator');
 
-    it("the 5 number does not exist in first square", function() {
+    it('the 5 number does not exist in first square', function() {
         var game = [
             [1, 0, 0, 0, 0, 0, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -111,7 +111,7 @@ describe("SquareValidator Test", function() {
         expect(result).toBeFalsy();
     });
 
-    it("the 5 number exist in nine square", function() {
+    it('the 5 number exist in nine square', function() {
         var game = [
             [1, 0, 0, 0, 0, 3, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],
@@ -133,7 +133,7 @@ describe("SquareValidator Test", function() {
         expect(result).toBeTruthy();
     });
 
-    it("the 8 number exist in six square", function() {
+    it('the 8 number exist in six square', function() {
         var game = [
             [1, 0, 0, 0, 0, 3, 0, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 1, 0],

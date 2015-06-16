@@ -20,16 +20,13 @@
 </head>
 <body>
     <header class="site-header">
-        <h1>Sudokuz Game 2</h1>
+        <h1>Sudokuz Game</h1>
     </header>
     <div id="wrapper" class="container" ng-app="sudoku">
         <div class="content" ng-controller="sudokuController">
             <div class="row">
                 <button ng-click="createGame()"><i
                         class="icon-random"></i> New Game
-                </button>
-                <button ng-click="restart()"><i
-                        class="icon-repeat"></i> Restart
                 </button>
                 <button ng-click="solve()"><i
                         class="icon-ok-sign"></i> Solve
@@ -38,7 +35,7 @@
             <div class="row">
                 <div class="col-md-11 col-sm-11 col-xs-11">
                     <div ng-repeat="row in game track by $index" class="row">
-                        <div ng-repeat="value in row track by $index | showNumber" class="col-md-1 col-sm-1 col-xs-1">
+                        <div ng-repeat="value in row track by $index" class="col-md-1 col-sm-1 col-xs-1">
                             <input class="form-control"
                                    type="text" style="text-align:center;"
                                    value="value" ng-model="value"
@@ -46,6 +43,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <span>{{status}}</span>
             </div>
         </div>
     </div>

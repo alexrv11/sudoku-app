@@ -10,8 +10,7 @@ module.exports = function (grunt) {
                 'src/client/**/*.js',
                 '!src/client/assets/**/*.js',
                 'src/server/**/*.js',
-                'test/**/*.js',
-                'support/karma/**/*.js'
+                'test/**/*.js'
             ],
             options: {
                 jshintrc: '.jshintrc'
@@ -50,7 +49,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jasmine-node');
 
     grunt.registerTask('build', [
-        //'jshint'
+        'jshint',
         'wiredep'
     ]);
 
