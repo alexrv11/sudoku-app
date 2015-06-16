@@ -9,7 +9,9 @@ install:
 - bower install
 - echo $HEROKU_API_KEY
 - echo $env.HEROKU_API_KEY
-before_script: grunt build
+script:
+- grunt build
+- npm test
 deploy:
   provider: heroku
   skip_cleanup: true
