@@ -1,3 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%
+}
+
+body {
+    background-color: #122b40;
+}
+
 .margin_left_60 {
     margin-left: 60px !important;
 }
@@ -20,11 +31,46 @@ input.correct {
     background: #EBE6DF !important;
 }
 
-#wrapper {
-    margin-top: 20px;
+button {
+    height: 35px;
+    width: 120px;
+    background-color: #065710;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    font-size: 17px;
 }
 
-.row{
+.row input {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 24px;
+    border: 0 inset black;
+    float: left;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#wrapper {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+}
+
+.row {
     margin-bottom: 10px;
 }
 
@@ -39,8 +85,24 @@ input.correct {
     font-size: 15px;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+ }
+
 .site-header nav .brand img {
     height: 40px;
     margin-top: -2px;
     vertical-align: middle;
+}
+
+.row .frame {
+    width: auto;
+    text-align: center;
+    padding-left: 28%;
+}
+
+.col-md-11 .col-sm-11 .col-xs-11 {
+    width: 100%;
 }

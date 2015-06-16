@@ -10,6 +10,7 @@ angular
 					SudokuRest.createGame().then(function (response) {
 						$scope.game = angular.copy(response.data);
 						$scope.initStateGame = angular.copy(response.data);
+						$scope.status = '';
 					});
 				};
 
