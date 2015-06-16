@@ -1,6 +1,11 @@
 language: node_js
 node_js:
 - '0.12'
+env:
+  global:
+    API_HEROKU_DEV:
+      secure: "Hz6+XZPjP2OcrJbe+3GUHZakooSoukCg7iJH4EMRUe9+ErAtmHgm+E/FJ/e1Q8PMj7ZE9KpOkrhsqsuJyfuAVn4vGpVdVBVxQooNKgjbd5Hq2XuQEJrmfKXP3algQ+ExZg8GBuqxRI2nMupsaJl8tqIge9FrPjZ2UhM/4kD21gNvGzNUH0TYXtBBO5VSCozjnx5/64iTmnCYWXx1q0lW62vXDL2RLH9D11Bm5Cc3OZSOsDvbY5mrF+ez3dsUtJ37cbegOhWlKjoha128BHGlTDkjRZLC7Pe5AITAUAwdv9vyr5/NTjA0Qm7N2cQbJU9UUYLKjMmAst7HKJWh/Ysa2GVFJWR5Z0a7m8XZsFD1w6Kyi/4urTs1svcdJg/yFpVRPRf1BjtWtE7yjzlijbv1b3i8NPoln+1PSTzIFasnilaLdIg4Oqlvrt8/+/MOAOSFx6kUQ/vvMC5jTLX3kGlFdJH9W8k3zjvNJpDOOVHW3QHM2htgFq9GG/iNrbDQ7zQOJIhPTopKxDDS5OY4S4utdXRNz9UJLKMvr7I07uWsjgVrnQycCSigF1CCEZ1iyNPGK4+NUYxm6v1tBoQ2NTxxZox83D/MjUsseiYRH5IppG1rWsBnnUdsRCZWmqtZwG5TkngWUsnYKTPYV/zxwSOG3mE+p6ACON05RMyd7MODq50="
+
 before_install:
 - npm install -g grunt-cli
 - npm install -g bower
@@ -8,18 +13,16 @@ install:
 - npm install
 - bower install
 - echo $HEROKU_API_KEY
-- echo $env.HEROKU_API_KEY
+- echo HEROKU_API_KEY
 before_script: grunt build
 deploy:
   provider: heroku
   skip_cleanup: true
   api_key:
-    master:
-      secure: "Hz6+XZPjP2OcrJbe+3GUHZakooSoukCg7iJH4EMRUe9+ErAtmHgm+E/FJ/e1Q8PMj7ZE9KpOkrhsqsuJyfuAVn4vGpVdVBVxQooNKgjbd5Hq2XuQEJrmfKXP3algQ+ExZg8GBuqxRI2nMupsaJl8tqIge9FrPjZ2UhM/4kD21gNvGzNUH0TYXtBBO5VSCozjnx5/64iTmnCYWXx1q0lW62vXDL2RLH9D11Bm5Cc3OZSOsDvbY5mrF+ez3dsUtJ37cbegOhWlKjoha128BHGlTDkjRZLC7Pe5AITAUAwdv9vyr5/NTjA0Qm7N2cQbJU9UUYLKjMmAst7HKJWh/Ysa2GVFJWR5Z0a7m8XZsFD1w6Kyi/4urTs1svcdJg/yFpVRPRf1BjtWtE7yjzlijbv1b3i8NPoln+1PSTzIFasnilaLdIg4Oqlvrt8/+/MOAOSFx6kUQ/vvMC5jTLX3kGlFdJH9W8k3zjvNJpDOOVHW3QHM2htgFq9GG/iNrbDQ7zQOJIhPTopKxDDS5OY4S4utdXRNz9UJLKMvr7I07uWsjgVrnQycCSigF1CCEZ1iyNPGK4+NUYxm6v1tBoQ2NTxxZox83D/MjUsseiYRH5IppG1rWsBnnUdsRCZWmqtZwG5TkngWUsnYKTPYV/zxwSOG3mE+p6ACON05RMyd7MODq50="
+    master: API_HEROKU_DEV
     production: d50f6d3e-9754-4e9f-b96b-724ef49b1215
   app:
     master: sudokuz
     production: sudokuz-prod
   run:
   - restart
-
