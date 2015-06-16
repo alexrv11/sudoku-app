@@ -6,8 +6,7 @@ html, body {
 }
 
 body {
-    background-image: url('../image/img02.png');
-    background-repeat: repeat;
+    background-color: #122b40;
 }
 
 .margin_left_60 {
