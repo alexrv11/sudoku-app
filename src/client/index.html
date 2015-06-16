@@ -38,7 +38,7 @@
                         <div ng-repeat="value in row track by $index" class="col-md-1 col-sm-1 col-xs-1">
                             <input class="form-control"
                                    type="text" style="text-align:center;"
-                                   value="{{value | showNumber}}"
+                                   value="value" ng-model="value"
                                    ng-maxlength="1" required>
                         </div>
                     </div>
