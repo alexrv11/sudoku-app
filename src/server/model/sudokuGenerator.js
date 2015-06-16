@@ -3,11 +3,11 @@ var initGame = function () {
     for (var i = 0; i < 9; ++i) {
         var newRow = [];
         for (var j = 0; j < 9; ++j) {
-            newRow.push(0)
+            newRow.push(0);
         }
         result.push(newRow);
     }
-    return result
+    return result;
 };
 
 module.exports = {

@@ -11,10 +11,10 @@ module.exports = function (game) {
     this.put = function(row, col, value) {
         game[row][col] = value;
 
-        return game[row][col] == value;
+        return game[row][col] === value;
     };
 
     this.game = function() {
         return game;
-    }
+    };
 };
