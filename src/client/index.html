@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <!-- bower:css -->
-    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/libs/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- bower:js -->
@@ -12,6 +11,7 @@
     <script src="assets/libs/angular/angular.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css"/>
     <script src="sudoku/app.js"></script>
     <script src="sudoku/sudoku.filter.js"></script>
@@ -30,7 +30,7 @@
                         <div ng-repeat="value in row track by $index">
                             <input class="form-control"
                                    type="text" style="text-align:center;"
-                                   value="value" ng-model="value"
+                                   value="{{value | showNumber}}"
                                    ng-maxlength="1" required>
                         </div>
                     </div>
